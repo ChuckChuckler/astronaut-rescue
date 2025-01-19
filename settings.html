@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration</title>
+    <link href="settings.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+15&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Short+Stack&family=Walter+Turncoat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>OH NO!</h1>
+    <h3>You're an astronaut, and your ship is minutes away from a massive asteroid!</h3>
+    <h3>If you hit it, you'll surely be dead...</h3>
+    <h2>THANKFULLY, YOUR TEAM PROVIDED YOU WITH AN EMERGENCY MISSILE TO HANDLE THIS EXACT SCENARIO!</h2>
+    <p>...odd that they knew this would happen...</p>
+    <h3>Unfortunately, the button appears to be locked with a six-digit safety code.</h3>
+    <h3>That's probably because unleashing the missile will cause vast destruction of various adjacent celestial objects.</h3>
+    <h3>But since when have humans cared about that anyways, amirite? HAHA!</h3>
+    <h3>To figure out the password, you'll need to consult your Algebra II skills from high school to solve a bunch of Solving-Over-C equations, the solutions of which correspond to the six digits in the key. You know how people say "When am I going to even use this outside of school??" Well, here it is.</h3>
+    <h3>To be honest, you should've just taken the job as a McDonald's cashier when you had the chance. You get paid like teacher salary right now. Probably how much your Algebra II teacher would've earned. Well, too late now. Hurry up and figure out the password so you don't die.</h3>
+
+    <hr>
+    <h1>Configuration</h1>
+    <div class="innerHolder">
+        <h3>Time Limit (Minutes)</h3>
+        <input id="timeLimit" type="number">
+        <p>Your ship will crash in this many minutes!</p>
+        <h3>Minigames Toggle</h3>
+        <input type="checkbox" id="minigames" checked>
+        <p>Enable this for more fun practicing, turn it off for more focused studying</p>
+        <br>
+        <button onclick="game()">Play!</button>
+    
+        <p id="errInfo"></p>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

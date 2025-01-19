@@ -1,0 +1,669 @@
+@keyframes accessDbSwell{
+    from{width: 250px;
+        height: 250px;}
+    to{width: 280px;
+        height: 280px;}
+}
+
+@keyframes accessDbShrink{
+    to{width: 250px;
+        height: 250px;}
+    from{width: 280px;
+        height: 280px;}
+}
+
+@keyframes accesMsCSwell{
+    from{width: 150px;
+        height: 150px;}
+    to{width: 180px; height: 180px;}
+}
+
+@keyframes accesMsCShrink{
+    to{width: 150px;
+        height: 150px;}
+    from{width: 180px; height: 180px;}
+}
+
+@keyframes dbFlyIn{
+    from{
+        left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    }
+    to{
+        left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    }
+}
+
+@keyframes dbFlyOut{
+    to{
+        left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    }
+    from{
+        left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    }
+}
+
+@keyframes nextPrevSwell{
+    from{    width: 10vw;
+        height: 5vh;}
+    to{width: 12vw; height: 6vh;}
+}
+
+@keyframes nextPrevShrink{
+    to{    width: 10vw;
+        height: 5vh;}
+    from{width: 12vw; height: 6vh;}
+}
+
+@keyframes dbSwell{
+    from{    height: 90%;
+        width: 80%;}
+    to{height: 95%; width: 85%;}
+}
+
+@keyframes dbShrink{
+    to{    height: 90%;
+        width: 80%;}
+    from{height: 95%; width: 85%;}
+}
+
+@keyframes leftright{
+    from{margin-left: 0%; margin-top: 0%;}
+    to{margin-left: 40%; margin-top: 0%;}
+}
+
+@keyframes letterDown{
+    from{margin-top: 0%;}
+    to{margin-top: 12%;}
+}
+
+@keyframes warningFlash{
+    from{opacity: 1;}
+    to{opacity: 0.5;}
+}
+
+.closeBtn{
+    background-color: rgb(255, 39, 39);
+    color: white;
+    border-style: none;
+    width: 4vw;
+    height: 4vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tryCode{
+    background-color: rgb(201, 201, 201);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.tryCode:hover{
+    background-color: rgb(112, 112, 112);
+}
+
+.closeBtn:hover{
+    background-color: rgb(182, 30, 30);
+}
+
+body{
+    background-color: rgb(11, 11, 11);
+    overflow: hidden;
+}
+
+label{
+    color: rgb(134, 255, 134);
+}
+
+.missileKey{
+    background-color: white;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.missileCodeTitle{
+    color: black;
+}
+
+.keyTitle{
+    color: black;
+    text-align: center;
+    font-family: "Walter Turncoat", serif;
+
+}
+
+li{
+    font-size: 1.4vw;
+    font-weight:800;
+}
+
+.checkAuthen{
+    background-color: rgb(58, 58, 58);
+    color:rgb(134, 255, 134);
+    border-style: none;
+}
+
+.rulesBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.rulesDiv{
+    visibility: none;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 20px;
+}
+
+.rulesInnerDiv{
+    width: 100%;
+}
+
+.btnInfo{
+    text-align: right;
+}
+
+.passcode{
+    color: black;
+}
+
+.letter{
+    color: black;
+    background-color: rgb(117, 117, 117);
+    width: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    height: 5%;
+}
+
+input{
+    background-color: transparent;
+    color: rgb(134, 255, 134);
+    font-family: "Courier Prime", serif;
+
+}
+
+.innerDb{
+    display: none;
+}
+
+.varName{
+    font-size: 10vw;
+    margin-top: 10px;
+}
+
+.problemDisplay{
+    font-size: 6vw;
+}
+
+.nextPrev{
+    background-color:rgb(134, 255, 134);
+    color: rgb(20, 102, 9);
+    width: 10vw;
+    height: 5vh;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 2vw;
+}
+
+.nextPrev:hover{
+    width: 12vw;
+    height: 6vh;
+    background-color: rgb(86, 151, 86);
+    color: white;
+    animation: nextPrevSwell;
+    animation-duration: 0.5s;
+}
+
+.nextPrev:not(:hover){
+    animation: nextPrevShrink;
+    animation-duration: 0.5s;
+    width: 10vw;
+    height: 5vh;
+}
+
+.prev{
+    float: left;
+}
+
+.next{
+    float: right;
+}
+
+.nightSky{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    z-index: -10;
+}
+
+.warning{
+    font-family: "Jersey 15", serif;
+    text-align: center;
+    color: rgb(212, 44, 44);
+    background-color: rgb(245, 133, 133);
+    width: 30%;
+    margin: auto;
+    height: 7%;
+    border-radius: 30px;
+    padding-top: 10px;
+    box-shadow: 0px 0px 20px 5px red;
+}
+
+.rulesTitle{
+    text-align: center;
+}
+
+.gameInfo{
+    text-align: center;
+}
+
+.img1{
+    float: left;
+}
+
+.computerInfo{
+    float: left;
+}
+
+.rulesInfo{
+    font-family: "Short Stack", serif;
+}
+
+.img2{
+    float: right;
+}
+
+.img3{
+    display: block;
+    margin: auto;
+}
+
+.rulesInfoh3{
+    color: black;
+    font-family: "Walter Turncoat", serif;
+}
+
+.btnInfoh3{
+    text-align: right;
+}
+
+.enemyInfoh3{
+    text-align: center;
+}
+
+.enemyInfo{
+    text-align: center;
+}
+
+.loginDiv{
+    display: none;
+}
+
+.overlay{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2, h3{
+    color: rgb(134, 255, 134);
+    font-family: "Courier Prime", serif;
+}
+
+.database{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: rgb(2, 2, 2);
+    z-index: 13;
+    height: 90%;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.passcodeHolder{
+    visibility: hidden;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(95, 95, 95);
+    display: flex;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.dbTitle{
+    font-family: "Pixelify Sans", serif;
+}
+
+.innerDiv{
+    width: 45%;
+    height: 80%;
+    margin: auto;
+}
+
+.missileCode{
+    background-color: white;
+    text-align: center;
+}
+
+.passwVerif{
+    color: rgb(142, 0, 0);
+}
+
+.accessDb{
+    position: absolute;
+    bottom: 21vh;
+    left: 3vw;
+    background-image: url("images/computerBtn.png");
+    background-size: 100%;
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    border-style: none;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.accessDb:hover{
+    width: 280px;
+    height: 280px;
+    animation-name: accessDbSwell;
+    animation-duration: 0.5s;
+}
+
+.accessDb:not(:hover){
+    width: 250px;
+    height: 250px;
+    animation-name: accessDbShrink;
+    animation-duration: 0.5s;
+}
+
+
+.accessMsC{
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translate(2%, -50%);
+    background-image: url("images/safetyBtn.png");
+    background-size: 100%;
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border-style: none;
+}
+
+.accessMsC:hover{
+    width: 180px;
+    height: 180px;
+    animation-name: accesMsCSwell;
+    animation-duration: 0.5s;
+}
+
+.accessMsC:not(:hover){
+    width: 150px;
+    height: 150px;
+    animation-name: accesMsCShrink;
+    animation-duration: 0.5s;
+}
+
+.letter{
+    display: none;
+}
+
+.slider{
+    width: 100%;
+    height: 7%;
+    background-color: rgb(173, 173, 173);
+    margin: auto;
+    margin-top: 100px;
+    display: none;
+}
+
+.opening{
+    background-color: rgb(61, 61, 61);
+    width: 10%;
+    height: 100%;
+}
+
+.enemy{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    left: 20%;
+    display: none;
+}
+
+.enemyWarning{
+    z-index: 15;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -5%);
+    animation: warningFlash;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    display: none;
+}
+
+
+/*particle anims (added separately bc theyre LONG)*/
+.particle{
+    position: absolute;
+    z-index: -10;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px white;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.particle:nth-child(odd){
+    height: 3px;
+    width: 3px;
+    opacity: 0.9;
+}
+
+.particle:nth-child(even){
+    height: 2px;
+    width: 2px;
+    opacity: 0.8;
+}
+
+.particleContainer{
+    z-index: -5;
+}
+
+.particle:nth-child(1){
+    animation-name: particle1;
+    transform: translate3d(-6vw, 21vh, 14px);
+    animation-delay:-13;
+}
+
+@keyframes particle1 {
+    100%{
+        transform: translate3d(105vw, 51vh, 9px);
+    }
+}
+
+.particle:nth-child(2){
+    animation-name: particle2;
+    transform: translate3d(-4vw, 21vh, 14px);
+    animation-delay: -12s;
+}
+
+@keyframes particle2 {
+    100%{
+        transform: translate3d(105vw, 35vh, 87px);
+    }
+}
+
+.particle:nth-child(3){
+    animation-name: particle3;
+    transform: translate3d(-6vw, 90vh, 16px);
+    animation-delay: -11s;
+}
+
+@keyframes particle3 {
+    100%{
+        transform: translate3d(105vw, 35vh, 32px);
+    }
+}
+
+.particle:nth-child(4){
+    animation-name: particle4;
+    transform: translate3d(-7vw, 99vh, 21px);
+    animation-delay: -10s;
+}
+
+@keyframes particle4 {
+    100%{
+        transform: translate3d(105vw, 0vh, 5px);
+    }
+}
+
+.particle:nth-child(5){
+    animation-name: particle5;
+    transform: translate3d(-7vw, 50vh, 200px);
+    animation-delay: -9s;
+}
+
+@keyframes particle5 {
+    100%{
+        transform: translate3d(105vw, 95vh, 150px);
+    }
+}
+
+.particle:nth-child(6){
+    animation-name: particle6;
+    transform: translate3d(-5vw, 67vh, 51px);
+    animation-delay: -8s;
+}
+
+@keyframes particle6 {
+    100%{
+        transform: translate3d(105vw, 49vh, 32px);
+    }
+}
+
+.particle:nth-child(7){
+    animation-name: particle7;
+    transform: translate3d(-10vw, 50vh, 7px);
+    animation-delay: -7s;
+}
+
+@keyframes particle7 {
+    100%{
+        transform: translate3d(105vw, 21vh, 30px);
+    }
+}
+
+.particle:nth-child(8){
+    animation-name: particle8;
+    transform: translate3d(-6vw, 61vh, 7px);
+    animation-delay: -6s;
+}
+
+@keyframes particle8 {
+    100%{
+        transform: translate3d(105vw, 89vh, 14px);
+    }
+}
+
+.particle:nth-child(9){
+    animation-name: particle9;
+    transform: translate3d(-10vw, 10vh, 9px);
+    animation-delay: -5s;
+}
+
+@keyframes particle9 {
+    100%{
+        transform: translate3d(105vw, 49vh, 2px);
+    }
+}
+
+.particle:nth-child(10){
+    animation-name: particle10;
+    transform: translate3d(-5vw, 10vh, 5px);
+    animation-delay: -4s;
+}
+
+@keyframes particle10 {
+    100%{
+        transform: translate3d(105vw, 41vh, 2px);
+    }
+}
+
+.particle:nth-child(11){
+    animation-name: particle11;
+    transform: translate3d(-6vw, 1vh, 14px);
+    animation-delay:-3s;
+}
+
+@keyframes particle11 {
+    100%{
+        transform: translate3d(105vw, 23vh, 9px);
+    }
+}
+
+.particle:nth-child(12){
+    animation-name: particle12;
+    transform: translate3d(-4vw, 58vh, 14px);
+    animation-delay: -2s;
+}
+
+@keyframes particle12 {
+    100%{
+        transform: translate3d(105vw, 8vh, 87px);
+    }
+}
+
+.particle:nth-child(13){
+    animation-name: particle13;
+    transform: translate3d(-6vw, 89vh, 16px);
+    animation-delay: -1s;
+}

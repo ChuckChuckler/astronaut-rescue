@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronaut Rescue</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+15&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Short+Stack&family=Walter+Turncoat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="time" class="warning">X Seconds Until Crash</h1>
+
+    <button onclick="rulesDiv()" class="rulesBtn" id="rulesBtn">Rules</button>
+
+    <div id="rulesDiv" class="rulesDiv">
+        <button class="closeBtn" onclick="closeRules()">X</button>
+        <h1 class="rulesTitle">Astronaut Rescue</h1>
+        <p class="gameInfo">Astronaut Rescue is a game where you play as an astronaut trying to save your ship.</p>
+        <img src="images/computerBtn.png" height="200" width="200" class="img1">
+        <br>
+        <br>
+        <div class="rulesInnerDiv">
+            <h3 class="rulesInfoh3 computerInfoh3">This is the computer.</h3>
+            <p class="rulesInfo computerInfo">Here, you can access the the Quadra Database containing the equations you need to solve.</p>
+            <p class="rulesInfo computerInfo">If you have minigames enabled, you'll need a password to access the database!</p>
+            <p class="rulesInfo computerInfo">You can guess this password through a Wordle minigame.</p>
+            <p class="rulesInfo computerInfo">If you can guess the password in five tries, yippee! You can now log in at anytime!</p>
+            <P class="rulesInfo computerInfo">If not, the password will be changed, and you'll have to try again.</p>
+        </div>
+        <div class="rulesInnerDiv">
+            <img src="images/safetyBtn.png" height="200" width="200" class="img2">
+            <h3 class="rulesInfoh3 btnInfoh3">This is the safety button.</h3>
+            <p class="rulesInfo btnInfo">This is the feature that's pretty much your life or death.</p>
+            <p class="rulesInfo btnInfo">As you've probably already gathered, there's a six-digit code required to unlock the button.</p>
+            <p class="rulesInfo btnInfo">There's a key next to the input panel that provides the solutions of six of the equations in the Quadra Database.</p>
+            <p class="rulesInfo btnInfo">If you find a letter that matches, type it in the input box.</p>
+            <P class="rulesInfo btnInfo">If you have minigames enabled, you'll play a small minigame where you have to line up the letter with a space below it.</p>
+        </div>
+        <br>
+        <div class="rulesInnerDiv">
+            <img src="images/ufo.png" height="200" width="200" class="img3">
+            <h3 class="rulesInfoh3 enemyInfoh3">Enemy</h3>
+            <p class="rulesInfo enemyInfo">If you have minigames enabled, there's a chance for an enemy to spawn in the sky every so often.</p>
+            <p class="rulesInfo enemyInfo">Regardless of what you have open, you'll see a warning pop up at the bottom.</p>
+            <p class="rulesInfo enemyInfo">To defeat the enemy, quickly click on it before five seconds pass.</p>
+            <p class="rulesInfo enemyInfo">If you fail to defeat the enemy, your ship will be damaged and you'll lose 2 minutes of time.</p>
+        </div>
+    </div>
+    <div id="gameBody" class="gameBody">
+        <img id="overlay" class="overlay" src="images/astronautOverlay.png">
+
+        <img id="enemy" class="enemy" src="images/ufo.png" onclick="defeatEnemy()">
+
+        <h1 class="warning enemyWarning" id="enemyWarning">! Enemy Warning !</h1>
+
+        <div id="particleContainer" class="nightSky">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <button class="accessDb" onclick="accessDb()"></button>
+        <button class="accessMsC" onclick="accessMsC()"></button>
+        <div class="database" id="database">
+            <button class="closeBtn" onclick="closeDb()">X</button>
+            <div class="authenthDb" id="authenthDb">
+                <h2 id="dbTitle" class="dbTitle"></h2>
+                <h3 id="dbMsg1"></h3>
+                <h3 id="dbMsg2"></h3>
+                <h3 id="passAttempt1"></h3>
+                <h3 id="passAttempt2"></h3>
+                <h3 id="passAttempt3"></h3>
+                <h3 id="passAttempt4"></h3>
+                <h3 id="passAttempt5"></h3>
+                <h3 id="attemptsLeft"></h3>
+                <div class="loginDiv" id="loginDiv">
+                    <label for="dbPassw">   >_</label>
+                    <input name="dbPassw" id="dbPassw" class="dbPassw" type="text" autocomplete="off">
+                    <button id="checkAuthen" class="checkAuthen" onclick="checkAuthen()">Try</button>
+                </div>
+                <h3 id="authen1"></h3>
+                <h3 id="authen2"></h3>
+                <h3 id="authen3"></h3>
+            </div>
+            <div class="innerDb" id="innerDb">
+                <h3 id="varName" class="varName"></h3>
+                <h3 id="problemDisplay" class="problemDisplay"></h3>
+                <button id="prev" class="nextPrev prev" onclick="prev()">←-</button>
+                <button id="next" class="nextPrev next" onclick="next()">-→</button>
+            </div>
+        </div>
+        <div class="passcodeHolder" id="passcodeHolder">
+            <button class="closeBtn" onclick="closeMsC()">X</button>
+            <div id="missileCode" class="innerDiv missileCode">
+                <h2 class="missileCodeTitle">SAFETY MISSILE CODE</h2>
+                <input type="text" name="passcode" id="passcode" class="passcode" oninput="minigameTrigger()" autocomplete="off">
+                <button onclick="checkAnswer()" class="tryCode">Try Code</button>
+                <br>
+                <br>
+                <br>
+                <p id="passwVerif" class="passwVerif"></p>
+                <h3 class="letter" id="letter">E</h3>
+                <div class="slider" id="slider">
+                    <div id="opening" class="opening"></div>
+                </div>
+                <br>
+                <p class="feedback" id="feedback"></p>
+            </div>
+            <div id="missileKey" class="innerDiv missileKey">
+                <h2 class="keyTitle">Key</h2>
+                <ul>
+                    <li id="1">First digit:</li>
+                    <li id="2">Second digit:</li>
+                    <li id="3">Third digit:</li>
+                    <li id="4">Fourth digit:</li>
+                    <li id="5">Fith digit:</li>
+                    <li id="6">Sixth digit:</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function(){
+            let urlParams = new URLSearchParams(window.location.search);
+            setCountdown(urlParams.get("time"), urlParams.get("minigameMode"));
+            main();
+        }
+    </script>
+    
+</body>
+</html>

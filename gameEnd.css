@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+
+h1, h3{
+    color: white;
+}
+
+h1{
+    margin-top: 200px;
+    font-family: "Pixelify Sans", serif;
+    font-size: 20vw;
+    text-align: center;
+    line-height: 2px;
+}
+
+h3{
+    font-family: "Courier Prime", serif;
+    font-size: 4vw;
+    text-align: center;
+}

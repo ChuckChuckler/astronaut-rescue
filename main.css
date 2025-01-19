@@ -1,0 +1,55 @@
+@keyframes buttonSwell{
+    from{width: 30%; height: 10%;}
+    to{width: 32%; height: 12%;}
+}
+
+@keyframes buttonShrink{
+    to{width: 30%; height: 10%;}
+    from{width: 32%; height: 12%;}
+}
+
+body{
+    background-color: black;
+}
+
+h1, h3{
+    color: white;
+}
+
+h1{
+    font-size: 10vw;
+    font-family: "Pixelify Sans", serif;
+}
+
+h3{
+    font-size: 2vw;
+    font-family: "Courier Prime", serif;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    width: 30%;
+    height: 10%;
+    font-family: "Playfair Display", serif;
+    font-size: 2vw;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    animation: buttonSwell;
+    animation-duration: 0.5s;
+    width: 32%;
+    height: 12%;
+}
+
+button:not(:hover){
+    animation: buttonShrink;
+    animation-duration: 0.5s;
+    width: 30%;
+    height: 10%;
+}

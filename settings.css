@@ -1,0 +1,75 @@
+@keyframes buttonSwell{
+    from{width: 10vw; height: 5vh;}
+    to{width: 12vw; height: 6vh;}
+}
+
+@keyframes buttonShrink{
+    to{width: 10vw; height: 5vh;}
+    from{width: 12vw; height: 6vh;}
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: "Pixelify Sans", serif;
+    font-size: 4vw;
+}
+
+h3, p, h2{
+    color: white
+}
+
+h3{
+    font-family: "Playfair Display", serif;
+    font-size: 1.5vw;
+}
+
+p{
+    font-family: "Courier Prime", serif;
+    font-size: 1.5vw;
+}
+
+input{
+    color: white;
+    background-color: rgb(53, 53, 53);
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+.innerHolder{
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+button{
+    height: 5vh;
+    width: 10vw;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+button:hover{
+    animation: buttonSwell;
+    animation-duration: 0.5s;
+    width: 12vw;
+    height: 6vh;
+    background-color: rgb(32, 32, 32);
+}
+
+button:not(:hover){
+    animation: buttonShrink;
+    animation-duration: 0.5s;
+    width: 10vw;
+    height: 5vh;
+}
